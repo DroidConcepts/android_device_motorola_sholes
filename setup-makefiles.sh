@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES := \\
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # Pick up overlay for features that depend on non-open-source files
-DEVICE_PACKAGE_OVERLAYS := vendor/motorola/__DEVICE__/overlay
+DEVICE_PACKAGE_OVERLAYS := vendor/motorola/__DEVICE__/super-impose
 
 \$(call inherit-product, vendor/motorola/__DEVICE__/__DEVICE__-vendor-blobs.mk)
 EOF
@@ -75,8 +75,8 @@ BOARD_GPS_LIBRARIES := libmoto_gps
 USE_CAMERA_STUB := false
 EOF
 
-mkdir -p ../../../vendor/motorola/sholes/overlay/packages/apps/Launcher2/res/layout
-(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/motorola/sholes/overlay/packages/apps/Launcher2/res/layout/all_apps.xml
+mkdir -p ../../../vendor/motorola/sholes/super-impose/packages/apps/Launcher2/res/layout
+(cat << EOF) | sed s/__DEVICE__/$DEVICE/g > ../../../vendor/motorola/sholes/super-impose/packages/apps/Launcher2/res/layout/all_apps.xml
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2010 The Android Open Source Project
 

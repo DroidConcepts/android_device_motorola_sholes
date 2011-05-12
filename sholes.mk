@@ -15,8 +15,7 @@
 #
 
 #
-# This is the product configuration for a generic GSM passion,
-# not specialized for any geography.
+# This is the product configuration for a generic Motorola Sholes
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
