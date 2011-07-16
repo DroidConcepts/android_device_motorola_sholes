@@ -187,6 +187,8 @@ service ftmipcd /system/bin/ftmipcd
     oneshot
     disabled
 
+service sysinit /system/xbin/busybox run-parts /system/etc/init.d
+
 service mdm_panicd /system/bin/mdm_panicd
    oneshot
 
@@ -200,4 +202,3 @@ service savebpver /system/bin/SaveBPVer
 
 on property:dev.bootcomplete=1
    start savebpver
-
