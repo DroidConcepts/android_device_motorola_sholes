@@ -188,6 +188,7 @@ service ftmipcd /system/bin/ftmipcd
     disabled
 
 service sysinit /system/xbin/busybox run-parts /system/etc/init.d
+   oneshot
 
 service mdm_panicd /system/bin/mdm_panicd
    oneshot
